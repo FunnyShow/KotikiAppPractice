@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/catFragment">
+
+    <fragment
+        android:id="@+id/catFragment"
+        android:name="dev.keikem.kotikiapp.screens.fragment.cat.CatFragment"
+        tools:layout="@layout/fragment_cat">
+
+        <action
+            android:id="@+id/toNextFragment"
+            app:destination="@id/dogFragment" />
+        <action
+            android:id="@+id/toCounterFragment"
+            app:destination="@id/counterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dogFragment"
+        android:name="dev.keikem.kotikiapp.screens.fragment.dog.DogFragment"
+        tools:layout="@layout/fragment_cat" />
+
+    <fragment
+        android:id="@+id/counterFragment"
+        android:name="dev.keikem.kotikiapp.screens.fragment.counter.CounterFragment"
+        tools:layout="@layout/fragment_counter" />
+
+</navigation>
